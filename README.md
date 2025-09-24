@@ -28,6 +28,7 @@ Naive Bayes
 
 Random Forest
 
+
 Each model was trained using the TF-IDF features and the corresponding sentiment labels.
 
 EVALUATION METRICS:
@@ -42,6 +43,7 @@ Recall
 
 F1-Score
 
+
 ROC curves were also plotted for comparison.
 
 RESULTS:
@@ -51,7 +53,9 @@ Logistic Regression performed best on the IMDb dataset with the highest test acc
 HOW TO USE:
 
 Ensure dependencies for Python libraries like scikit-learn, pandas, matplotlib, and seaborn are installed.
+
 Run the notebook to load and preprocess the IMDb dataset.
+
 Train the models or use saved models to predict sentiments on new text.
 
 

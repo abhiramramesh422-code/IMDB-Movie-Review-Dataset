@@ -1,80 +1,67 @@
 # IMDB-Movie-Review-Dataset
 
-Overview
+# IMDb Movie Review Sentiment Analysis
 
-This project applies machine learning techniques to the IMDb movie review dataset in order to classify reviews as either positive or negative. The dataset consists of textual movie reviews with corresponding sentiment labels. The goal is to compare the performance of multiple models using standard evaluation metrics.
+This project applies machine learning techniques to the IMDb movie review dataset to classify reviews as positive or negative.
 
-Dataset
+## Dataset
 
-File: IMDB Dataset.csv
+- **File:** `IMDB Dataset.csv`  
+- **Columns:**  
+  - `review`: Text content of the movie review  
+  - `sentiment`: Label (positive or negative)  
+- Balanced dataset with an equal number of positive and negative reviews.
 
-Columns:
+## Methodology
 
-review: The text content of the movie review
+**Preprocessing:**  
+- Sentiment labels converted to numerical values (positive → 1, negative → 0)  
+- Text transformed using TF-IDF Vectorization (top 5000 terms)
 
-sentiment: The label associated with the review (positive or negative)
+**Models Evaluated:**  
+- Logistic Regression  
+- Linear SVM  
+- Multinomial Naive Bayes  
+- Random Forest Classifier  
 
-The dataset contains an equal distribution of positive and negative reviews, ensuring balance for binary classification.
+**Evaluation Metrics:**  
+- Accuracy  
+- Precision  
+- Recall  
+- F1-score  
 
-Methodology
+## Results
 
-Preprocessing
+| Model                  | Accuracy | Precision | Recall | F1-score |
+|------------------------|----------|-----------|--------|----------|
+| Logistic Regression    | ~0.88    | ~0.88     | ~0.88  | ~0.88    |
+| Linear SVM             | ~0.89    | ~0.89     | ~0.89  | ~0.89    |
+| Naive Bayes            | ~0.84    | ~0.84     | ~0.83  | ~0.83    |
+| Random Forest          | ~0.85    | ~0.85     | ~0.85  | ~0.85    |
 
-Sentiment labels were converted to numerical values (positive → 1, negative → 0).
+**Key Observations:**  
+- Linear SVM achieved the highest performance.  
+- Logistic Regression was comparable and a strong baseline.  
+- Naive Bayes was fast but slightly less accurate.  
+- Random Forest performed moderately but slower due to ensemble computation.
 
-Text data was transformed into numerical features using TF-IDF Vectorization with a vocabulary size limited to the top 5000 terms.
+## Visualizations
 
-Models Evaluated
+- Confusion matrices for each model  
+- Comparison bar chart for Accuracy, Precision, Recall, and F1-score  
 
-Logistic Regression
+## How to Run
 
-Linear Support Vector Machine (SVM)
+1. Upload `IMDB Dataset.csv` to your working environment (Google Colab or Jupyter Notebook).  
+2. Open one of the provided notebooks:  
+   - `imdb_sentiment_ready.ipynb` – evaluates models with accuracy and confusion matrices  
+   - `imdb_sentiment_metrics.ipynb` – evaluates models using all metrics  
+3. Execute all cells to reproduce the results.  
 
-Multinomial Naive Bayes
+## Conclusion
 
-Random Forest Classifier
+Classical machine learning methods can effectively classify IMDb reviews. Linear SVM performed best, followed closely by Logistic Regression, highlighting trade-offs between accuracy and computational efficiency.
 
-Evaluation Metrics
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-Key Observations
-
-Linear SVM consistently achieved the highest performance across all metrics.
-
-Logistic Regression provided results comparable to SVM and served as a strong baseline.
-
-Naive Bayes was computationally efficient but showed lower accuracy compared to SVM and Logistic Regression.
-
-Random Forest performed moderately well but was slower due to the ensemble method.
-
-Visualizations
-
-Confusion Matrices: To illustrate true vs. predicted classifications for each model.
-
-Comparison Bar Chart: To compare Accuracy, Precision, Recall, and F1-score across models in a single plot.
-
-How to Run
-
-Upload IMDB Dataset.csv to the working environment (Google Colab or Jupyter Notebook).
-
-Open one of the provided notebooks:
-
-imdb_sentiment_ready.ipynb (evaluates models with accuracy and confusion matrices)
-
-imdb_sentiment_metrics.ipynb (evaluates models using accuracy, precision, recall, and F1-score)
-
-Execute all cells to reproduce the results.
-
-Conclusion
-
-This project demonstrates the application of classical machine learning methods to sentiment classification tasks. Linear SVM emerged as the best-performing model for this dataset, followed closely by Logistic Regression. The analysis highlights the trade-offs between accuracy and computational efficiency across different algorithms.
 
 
 

@@ -1,5 +1,3 @@
-# IMDB-Movie-Review-Dataset
-
 # IMDb Movie Review Sentiment Analysis
 
 This project applies machine learning techniques to the IMDb movie review dataset to classify reviews as positive or negative.

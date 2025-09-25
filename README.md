@@ -50,10 +50,8 @@ This project applies machine learning techniques to the IMDb movie review datase
 
 ## How to Run
 
-1. Upload `IMDB Dataset.csv` to your working environment (Google Colab or Jupyter Notebook).  
-2. Open one of the provided notebooks:  
-   - `imdb_sentiment_ready.ipynb` – evaluates models with accuracy and confusion matrices  
-   - `imdb_sentiment_metrics.ipynb` – evaluates models using all metrics  
+1. Upload `IMDB Dataset.csv` to your working environment (Google Colab or Jupyter Notebook).
+2. Preprocess and train the dataset.
 3. Execute all cells to reproduce the results.  
 
 ## Conclusion
